@@ -16,7 +16,7 @@ export default function FlappyBird() {
 
   // Upate bird postion
   useEffect(() => {
-    let TimeID = NodeJS.Timer;
+    let TimeID: NodeJS.Timer;
 
     // 500 should be bottom of the window therefore, if bird is less that 500 eg flying its still alive therefore affected by gravity
     if (BirdPosition < GameHight - BirdSize){
