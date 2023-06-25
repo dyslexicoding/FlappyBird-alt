@@ -60,10 +60,10 @@ export default function FlappyBird() {
             style={{
               position: "absolute",
               backgroundColor: "red",
-              height: `${BIRD_SIZE}px`,
-              width: `${BIRD_SIZE}px`,
+              height: `${BirdSize}px`,
+              width: `${BirdSize}px`,
               borderRadius: "100%",
-              top: `${birdPosition}px`,
+              top: `${BirdPosition}px`,
             }}
           />
         </div>
