@@ -12,16 +12,16 @@ const JumpHeight = 100
 export default function FlappyBird() {
   
   // starts at a postion in air
-  const [BirdPostion, setBirdPostion] = useState(250);
+  const [BirdPosition, setBirdPosition] = useState(250);
 
   // Upate bird postion
   useEffect(() => {
     let TimeID = NodeJS.Timer;
 
     // 500 should be bottom of the window therefore, if bird is less that 500 eg flying its still alive therefore affected by gravity
-    if (BirdPostion < GameHight - BirdSize){
+    if (BirdPosition < GameHight - BirdSize){
       TimeID = setInterval(() => {
-        setBirdPostion((BirdPostion) => BirdPostion + Gravity);
+        setBirdPosition((BirdPosition) => BirdPosition + Gravity);
       },24);
     } 
 
@@ -31,13 +31,13 @@ export default function FlappyBird() {
     };
 
 
-  }, [BirdPostion]);
+  }, [BirdPosition]);
 
   // Jumping Function
 
   const handleClick = () => {
-    let newBirdPostion = BirdPostion - JumpHeight;
-    setBirdPostion(newBirdPostion)
+    let newBirdPosition = BirdPosition - JumpHeight;
+    setBirdPosition(newBirdPosition)
   }
 
 
